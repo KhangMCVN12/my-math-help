@@ -1,11 +1,11 @@
 print("\033[33mBot: Welcome User! To Python Calculator!")
 print("Bot: Would you like to pick a name instead of 'User'?")
 
-# Biến lưu tên người dùng và kết quả phép toán trước đó
+# var check momento
 username_input = []
 ans = []
 
-# Hỏi người dùng có muốn đặt tên không
+# what de fuk is your name
 while True:
     answer_1 = input("You: ").lower()
     if answer_1 in ("of course", "yes", "okay", "sure", "ok"):
@@ -13,12 +13,12 @@ while True:
         username_input.append(username)
         break
     elif answer_1 in ("no", "nah"):
-        username_input.append("User")  # Đặt tên mặc định là 'User'
+        username_input.append("User") 
         break
     else:
         print("I can't understand it!")
 
-# Vòng lặp chính của chương trình
+# loop code
 while True:
     print("\033[33mBot: What type of math do you need?")
     print("1. Plus (+)")
@@ -30,7 +30,7 @@ while True:
 
     answer_2 = input(f"{username_input[0]}: ").strip().lower()
 
-    # Kiểm tra lựa chọn
+    # choose pls
     if answer_2 in ("+", "-", "x", "/"):
         print("Bot: Okay! Let's calculate.")
 
@@ -48,12 +48,12 @@ while True:
                 elif answer_2 == "/":
                     if second_number == 0:
                         print("Bot: Cannot divide by zero!")
-                        continue  # Quay lại yêu cầu nhập số
+                        continue 
                     result = first_number / second_number
 
                 print(f"Bot: The answer is {result}")
-                ans.append(result)  # Lưu kết quả vào danh sách
-                break  # Quay lại menu chính
+                ans.append(result) 
+                break
             except ValueError:
                 print("Bot: Please enter a valid number!")
 
